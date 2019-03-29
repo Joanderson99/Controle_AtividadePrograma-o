@@ -22,7 +22,7 @@ void cadastrarGerente() {
 	printf("Senha:  \n");
 	scanf(" %19[^\n]",senha);
 	printf("Nome Completo: \n");
-	scanf(" 99[^\n]",nome);
+	scanf(" %99[^\n]",nome);
  
   
 }
@@ -111,10 +111,31 @@ void menuLogin(void) {
 
 
 void menuRelat(){
-  printf("---> Menu de Relatórios <--- /n");
-  printf("1 -> Relatórios Gerente \n");
-  printf("2 -> Relatórios Funcionários \n");
-  printf("3 -> Atividades em Andamento \n");
+  int op
+
+  do{
+    printf("\n---> Menu de Relatórios <--- \n");
+    printf("1 -> Relatórios Gerente \n");
+    printf("2 -> Relatórios Funcionários \n");
+    printf("3 -> Atividades em Andamento \n");
+    printf("0 -> Sair \n");
+    scanf("%d",&op);
+
+    switch(op){
+      case 1:
+      printf("ainda terminar \n");
+      break;
+      case 2:
+      printf("Ainda Terminar \n");
+      case 3:
+      printf("Ainda terminar \n");
+      case 0:
+      printf("Saindo do menu Relatórios\n");
+      break;
+      default:
+        printf("Você selecionou uma opção inválida ...\n");
+    }
+  }while(op != 0);
 }
 
 int main(){
