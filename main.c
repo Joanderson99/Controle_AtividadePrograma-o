@@ -6,7 +6,6 @@ int menuPrincipal(void) {
   printf("\n");
 	printf("1 -> Realizar Cadastro \n");
 	printf("2 -> Realizar Login \n");
-	printf("3 -> Exibir Relatórios \n");
 	printf("0 -> Sair do sistema \n");
 	printf("Escolha sua opção: ");
   scanf("%d", &opcao);
@@ -43,20 +42,20 @@ int cadastrarFunc(void) {
 int menuCadastro(void) {
   int opcao;
   printf("\n");
-	printf("1 -> Cadastro Gerente ");
-	printf("2 -> Cadastro Funcionário ");
-	printf("0 -> Voltar ");
-	printf("Escolha sua opção: ");
+	printf("1 -> Cadastro Gerente \n");
+	printf("2 -> Cadastro Funcionário \n");
+	printf("0 -> Voltar \n");
+	printf("Escolha sua opção: \n");
   scanf("%d", &opcao);
   switch (opcao){
     case 1:
-    cadastrarGerente();
-    break;
+      cadastrarGerente();
+      break;
     case 2:
-    cadastrarFunc();
-    break;
+      cadastrarFunc();
+      break;
     default:
-    printf("Você digitou uma opção inválida !! Tente novamente !! ");
+      printf("Você digitou uma opção inválida !! Tente novamente !! ");
   }
   return 1;
 }
@@ -95,47 +94,79 @@ void menuLogin(void) {
     scanf("%d", &opcao);
     switch(opcao){
       case 1:
-      logGerente();
-      break;
+        logGerente();
+        break;
       case 2:
-      logFunc();
-      break;
+        logFunc();
+        break;
       case 0:
-      printf("Saindo da opção de Login ...");
-	  default:
-	  printf("Você escolheu uma opção errada ...");
+        printf("Saindo da opção de Login ...");
+	   default:
+	   printf("Você escolheu uma opção errada ...");
     }
   }while (opcao != 0);
 
 }
 
-
-void menuRelat(){
-  int op
-
-  do{
-    printf("\n---> Menu de Relatórios <--- \n");
-    printf("1 -> Relatórios Gerente \n");
-    printf("2 -> Relatórios Funcionários \n");
-    printf("3 -> Atividades em Andamento \n");
-    printf("0 -> Sair \n");
-    scanf("%d",&op);
-
-    switch(op){
-      case 1:
-      printf("ainda terminar \n");
+void menuGerente(){
+  int opcao;
+  do {
+    printf("---> Menu de tarefas <---\n");
+    printf("1 -> Cadastrar \n");
+    printf("2 -> Alterar\n");
+    printf("3 -> Excluir\n");
+    printf("4 -> Relatórios\n");
+    printf("0 -> Voltar\n");
+  }
+  switch(opcao){
+    case 1:
+      printf("Fazer somente na parte de gravar arquivos\n");
       break;
-      case 2:
-      printf("Ainda Terminar \n");
-      case 3:
-      printf("Ainda terminar \n");
-      case 0:
-      printf("Saindo do menu Relatórios\n");
+    case 2:
+      printf("Fazer somente na parte de gravar arquivos\n");
       break;
-      default:
-        printf("Você selecionou uma opção inválida ...\n");
-    }
-  }while(op != 0);
+    case 3:
+      printf("Fazer somente na parte de gravar arquivos\n");
+      break;
+    case 4:
+      printf("Fazer somente na parte de gravar arquivos\n");
+      break;
+    case 0:
+      printf("Você está saindo... \n");
+      break;
+    default:
+      printf("Você digitou uma opção errada!! Tente novamente !!\n");
+  }while(opcao != 0);
+}
+
+void menuFunc(){
+  int opcao;
+  do {
+    printf("---> Menu de tarefas <---\n");
+    printf("1 -> Projetos em Aberto\n");
+    printf("2 -> Projetos em Andamento\n");
+    printf("3 -> Projetos Concluídos\n");
+    printf("0 -> Voltar\n");
+  }
+  switch(opcao){
+    case 1:
+      printf("Fazer somente na parte de gravar arquivos\n");
+      break;
+    case 2:
+      printf("Fazer somente na parte de gravar arquivos\n");
+      break;
+    case 3:
+      printf("Fazer somente na parte de gravar arquivos\n");
+      break;
+    case 4:
+      printf("Fazer somente na parte de gravar arquivos\n");
+      break;
+    case 0:
+      printf("Você está saindo... \n");
+      break;
+    default:
+      printf("Você digitou uma opção errada!! Tente novamente !!\n");
+  }while(opcao != 0);
 }
 
 int main(){
@@ -151,9 +182,6 @@ int main(){
 		break;
       case 2:
 		menuLogin();
-		break;
-      case 3:
-		menuRelat();
 		break;
       case 0:
 		printf("Você está saindo do sistema...");
