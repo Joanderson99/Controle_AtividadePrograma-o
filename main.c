@@ -61,6 +61,7 @@ int menuCadastro(void) {
 }
 
 void logGerente() {
+
   char senha[20];
   char login[20];
   printf("\n");
@@ -69,9 +70,10 @@ void logGerente() {
 	scanf(" %s19[^\n]",login);
 	printf("Senha:  ");
 	scanf(" %s19[^\n]",senha);
+
 }
 
-void logFunc() {
+int logFunc(void) {
   char senha[20];
   char login[20];
   printf("\n");
@@ -80,6 +82,7 @@ void logFunc() {
 	scanf(" %s19[^\n]",login);
 	printf("Senha: ");
 	scanf(" %s19[^\n]",senha);
+  return 1;
 }
 
 void menuLogin(void) {
