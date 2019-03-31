@@ -117,7 +117,10 @@ void menuGerente(){
     printf("3 -> Excluir\n");
     printf("4 -> Relatórios\n");
     printf("0 -> Voltar\n");
-  }
+    printf("Escolha uma opção \n");
+    scanf("%d", &opcao);
+
+
   switch(opcao){
     case 1:
       printf("Fazer somente na parte de gravar arquivos\n");
@@ -136,6 +139,7 @@ void menuGerente(){
       break;
     default:
       printf("Você digitou uma opção errada!! Tente novamente !!\n");
+    }
   }while(opcao != 0);
 }
 
@@ -147,7 +151,9 @@ void menuFunc(){
     printf("2 -> Projetos em Andamento\n");
     printf("3 -> Projetos Concluídos\n");
     printf("0 -> Voltar\n");
-  }
+    printf("Escolha uma opção \n");
+    scanf("%d", &opcao);
+
   switch(opcao){
     case 1:
       printf("Fazer somente na parte de gravar arquivos\n");
@@ -166,6 +172,7 @@ void menuFunc(){
       break;
     default:
       printf("Você digitou uma opção errada!! Tente novamente !!\n");
+    }
   }while(opcao != 0);
 }
 
