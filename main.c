@@ -4,163 +4,177 @@
 int menuPrincipal(void) {
   int opcao;
   printf("\n");
-	printf("1 -> Realizar Cadastro \n");
-	printf("2 -> Realizar Login \n");
-	printf("3 -> Exibir Relatórios \n");
-	printf("0 -> Sair do sistema \n");
-	printf("Escolha sua opção: ");
+  printf("------------------\n");
+  printf("| Menu Principal |\n");
+  printf("------------------\n");
+  printf("[1] Realizar Cadastro \n");
+  printf("[2] Realizar Login \n");
+  printf("[3] Exibir Relatórios \n");
+  printf("[0] Sair do sistema \n");
+  printf("Escolha sua opção: ");
   scanf("%d", &opcao);
-	return opcao;
+  return opcao;
 }
 
-void cadastrarGerente() {
+void cadastrarGerente(void) {
   char login[20],nome[100],senha[20];
   printf("\n");
-	printf("--> Cadastrar Gerente <-- \n");
-	printf("Login: \n");
-	scanf(" %19[^\n]",login);
-	printf("Senha:  \n");
-	scanf(" %19[^\n]",senha);
-	printf("Nome Completo: \n");
-	scanf(" %99[^\n]",nome);
- 
-  
+  printf("-----------------------\n");
+  printf("|  Cadastrar Gerente  |\n");
+  printf("-----------------------\n");
+  printf("\nLogin: \n");
+  scanf(" %19[^\n]",login);
+  printf("\nSenha:  \n");
+  scanf(" %19[^\n]",senha);
+  printf("\nNome Completo: \n");
+  scanf(" %99[^\n]",nome);
 }
 
 int cadastrarFunc(void) {
   char login[20],nome[100],senha[20];
   printf("\n");
-	printf("--> Cadastrar funcionário <-- \n");
-	printf("Login: ");
-	scanf(" %19[^\n]",login);
-	printf("Senha:  ");
-	scanf(" %19[^\n]",senha);
-	printf("Nome Completo: ");
-	scanf(" %99[^\n]",nome);
+  printf("-------------------------\n");
+  printf("| Cadastrar funcionário |\n");
+  printf("-------------------------\n");
+  printf("Login: ");
+  scanf(" %19[^\n]",login);
+  printf("Senha:  ");
+  scanf(" %19[^\n]",senha);
+  printf("Nome Completo: ");
+  scanf(" %99[^\n]",nome);
   return 1;
 }
 
 int menuCadastro(void) {
   int opcao;
   printf("\n");
-	printf("1 -> Cadastro Gerente ");
-	printf("2 -> Cadastro Funcionário ");
-	printf("0 -> Voltar ");
-	printf("Escolha sua opção: ");
+  printf("---------------------\n");
+  printf("| Menu de Cadastros |\n");
+  printf("---------------------\n");
+  printf("[1] Cadastro Gerente \n");
+  printf("[2] Cadastro Funcionário\n");
+  printf("[0] Voltar \n");
+  printf("\nEscolha sua opcao: \n");
   scanf("%d", &opcao);
   switch (opcao){
     case 1:
-    cadastrarGerente();
-    break;
+          cadastrarGerente();
+          break;
     case 2:
-    cadastrarFunc();
-    break;
+          cadastrarFunc();
+          break;
     default:
-    printf("Você digitou uma opção inválida !! Tente novamente !! ");
+          printf("Você digitou uma opção inválida !! Tente novamente !! ");
   }
   return 1;
 }
 
-void logGerente() {
+void logGerente(void) {
   char senha[20];
   char login[20];
   printf("\n");
-	printf("--> Login Gerente <-- \n");
-	printf("Login: ");
-	scanf(" %s19[^\n]",login);
-	printf("Senha:  ");
-	scanf(" %s19[^\n]",senha);
+  printf("-----------------\n");
+  printf("| Login Gerente |\n");
+  printf("-----------------\n");
+  printf("Login: ");
+  scanf(" %s19[^\n]",login);
+  printf("Senha:  ");
+  scanf(" %s19[^\n]",senha);
 }
 
-void logFunc() {
+void logFunc(void) {
   char senha[20];
   char login[20];
   printf("\n");
-	printf("--> Login Funcionários <-- \n");
-	printf("Login: ");
-	scanf(" %s19[^\n]",login);
-	printf("Senha: ");
-	scanf(" %s19[^\n]",senha);
+  printf("---------------------\n");
+  printf("| Login Funcionário |\n");
+  printf("---------------------\n");
+  printf("Login: ");
+  scanf(" %s19[^\n]",login);
+  printf("Senha: ");
+  scanf(" %s19[^\n]",senha);
 }
 
 void menuLogin(void) {
   int opcao;
-  
+
   do {
     printf("\n");
-    printf("1 -> Login Gerente \n");
-    printf("2 -> Login Funcionário \n");
-    printf("0 -> Voltar \n");
+    printf("[1] Login Gerente \n");
+    printf("[2] Login Funcionário \n");
+    printf("[0] Voltar \n");
     printf("Escolha sua opção: ");
     scanf("%d", &opcao);
     switch(opcao){
       case 1:
-      logGerente();
-      break;
+            logGerente();
+            break;
       case 2:
-      logFunc();
-      break;
+            logFunc();
+            break;
       case 0:
-      printf("Saindo da opção de Login ...");
-	  default:
-	  printf("Você escolheu uma opção errada ...");
+            printf("Saindo da opção de Login ...");
+            break;
+    default:
+            printf("Você escolheu uma opção errada ...");
     }
-  }while (opcao != 0);
+  }
+  while (opcao != 0);
 
 }
 
-
-void menuRelat(){
-  int op
-
-  do{
-    printf("\n---> Menu de Relatórios <--- \n");
-    printf("1 -> Relatórios Gerente \n");
-    printf("2 -> Relatórios Funcionários \n");
-    printf("3 -> Atividades em Andamento \n");
-    printf("0 -> Sair \n");
-    scanf("%d",&op);
-
-    switch(op){
+void menuRelat(void){
+  int opcao;
+  printf("----------------------\n");
+  printf("| Menu de Relatórios |\n");
+  printf("----------------------\n");
+  do {
+    printf("[1] Relatórios Gerente \n");
+    printf("[2] Relatórios Funcionários \n");
+    printf("[3] Atividades em Andamento \n");
+    printf("[0] Voltar \n");
+    printf("Escolha sua opção: ");
+    scanf("%d", &opcao);
+    switch(opcao){
       case 1:
-      printf("ainda terminar \n");
-      break;
+            printf("Ainda não tem relatórios\n");
+            break;
       case 2:
-      printf("Ainda Terminar \n");
+            printf("Ainda não tem relatórios\n");
+            break;
       case 3:
-      printf("Ainda terminar \n");
-      case 0:
-      printf("Saindo do menu Relatórios\n");
-      break;
+            printf("Você não tem atividades em andamento\n");
+            break;
       default:
-        printf("Você selecionou uma opção inválida ...\n");
+            printf("Você escolheu uma opção errada ...");
     }
-  }while(op != 0);
+  }
+  while (opcao != 0);
 }
 
 int main(){
-	setlocale( LC_ALL, "pt - BR" );  
+  
 
-	int op;
- 
+  int op;
+
   do {
-   op = menuPrincipal();
-  switch(op){
+    printf("\n");
+    op = menuPrincipal();
+    switch(op){
       case 1:
-		menuCadastro();
-		break;
+            menuCadastro();
+            break;
       case 2:
-		menuLogin();
-		break;
+            menuLogin();
+            break;
       case 3:
-		menuRelat();
-		break;
+            menuRelat();
+            break;
       case 0:
-		printf("Você está saindo do sistema...");
-		break;
+            printf("Você está saindo do sistema...Xau;) ");
+            break;
       default:
-		printf("Você digitou uma opção inválida, tente novamente");
-      }
+            printf("Você digitou uma opção inválida, tente novamente\n");
+    }
   } while(op != 0);
-   
-}
+} 
